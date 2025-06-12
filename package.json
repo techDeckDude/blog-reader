@@ -1,0 +1,32 @@
+{
+  "name": "blog-reader",
+  "version": "1.0.0",
+  "description": "https://docs.amplify.aws/flutter/reference/amplify_outputs/ https://docs.amplify.aws/flutter/build-a-backend/data/set-up-data/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techDeckDude/blog-reader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techDeckDude/blog-reader/issues"
+  },
+  "homepage": "https://github.com/techDeckDude/blog-reader#readme",
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.7.2",
+    "aws-cdk-lib": "^2.189.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.5",
+    "tsx": "^4.20.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "aws-amplify": "^6.15.0"
+  }
+}
