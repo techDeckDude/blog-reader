@@ -5,7 +5,22 @@ const schema = a.schema({
     .model({
       content: a.string(),
     })
-    .authorization((allow) => [allow.publicApiKey()]),
+    .authorization(allow => [allow.publicApiKey()]),
+    addBlogPost: a
+    .mutation()
+    .arguments({
+      id: a.id(),
+      title: a.string().required(),
+      content: a.string().required(),
+    })
+    .returns(a.ref("BlogPostType"))
+    .authorization(allow => [allow.publicApiKey()])
+    .handler(
+      a.handler.custom({
+        dataSource: "ExternalPostTableDataSource",
+        entry: "./addBlogPost.js",
+      })
+    ),
 });
 
 export type Schema = ClientSchema<typeof schema>;
