@@ -13,15 +13,9 @@ function App() {
     });
   }, []);
 
-  function createBlogPost() {
-    client.models.BlogPost.create({
-      content: window.prompt("Blog post content")});
-  }
-
   return (
     <main>
       <h1>My Blog Posts</h1>
-      <button onClick={createBlogPost}>+ new</button>
       <ul>
         {blogPosts.map((post) => (
           <li key={post.id}>{post.content}</li>
